@@ -625,3 +625,853 @@ Processing by PostsController#edit as HTML
   [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
   Rendered posts/edit.html.erb within layouts/application (16.6ms)
 Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-01 14:25:32 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (1.5ms)
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-09-01 14:25:35 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 287ms (Views: 285.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-09-01 14:25:36 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-09-01 14:25:36 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-09-01 14:25:36 -0400
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 127.0.0.1 at 2018-09-01 14:25:36 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-09-01 14:25:36 -0400
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-09-01 14:25:39 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-09-01 14:25:42 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CkPl0XyWaCo3J6glDAFL3NRjEz+9BoLx8/diwgBwDewFQTNOy+JFP9EeAfZwNVwqyw6KDJOHsJCuG2bcWei8Dw==", "title"=>"123", "description"=>"123", "commit"=>"Submit Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "123"], ["description", "123"], ["created_at", "2018-09-01 18:25:42.512890"], ["updated_at", "2018-09-01 18:25:42.512890"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/posts/3
+Completed 302 Found in 13ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2018-09-01 14:25:42 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (1.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 32ms (Views: 23.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2018-09-01 14:25:45 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  Rendered posts/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-09-01 14:25:48 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"icKG34haaRQisPSaSvcVnrCzuMWDtdiq3Qg8hlafEJ+GwFBAPy5EAcSJXUk2wwJor94h9q006suA5DiYDwehfA==", "title"=>"123", "description"=>"123", "commit"=>"Submit Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "123"], ["description", "123"], ["created_at", "2018-09-01 18:25:48.481916"], ["updated_at", "2018-09-01 18:25:48.481916"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/posts/4
+Completed 302 Found in 3ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2018-09-01 14:25:48 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2018-09-01 14:25:53 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  Rendered posts/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/edit" for 127.0.0.1 at 2018-09-01 14:26:29 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=edit):
+  app/controllers/posts_controller.rb:7:in `show'
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.6ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2018-09-01 14:26:45 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  Rendered posts/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-09-01 14:26:51 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0G1h6WhS+7TNyh76GRXZur1A+r+s2h7ew6c8/mgcG+Tfb7d23ybWoSvztyllIc5Moi1jjIJbLL+eSzjgMYSqBw==", "title"=>"test4", "description"=>"test4", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "test4"], ["description", "test4"], ["created_at", "2018-09-01 18:26:51.699028"], ["updated_at", "2018-09-01 18:26:51.699028"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/posts/5
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2018-09-01 14:26:51 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-09-01 14:26:55 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2018-09-01 14:27:42 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  Rendered posts/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-01 14:28:47 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2018-09-01 14:28:52 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 12.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-09-01 14:28:58 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U7WciKxXoZ6U4gQ9EyOtc+NzwwIvTdVK2HOmskc1qDNct0oXGyOMi3Lbre5vF7qF/B5aMQHM5yuFn6KsHq0Z0A==", "title"=>"i edited 4", "description"=>"edited 4\r\n", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "i edited 4"], ["description", "edited 4\r\n"], ["created_at", "2018-09-01 18:28:58.834526"], ["updated_at", "2018-09-01 18:28:58.834526"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/posts/6
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2018-09-01 14:28:58 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2018-09-01 14:30:48 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2018-09-01 14:30:50 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/sherzodkarimov/Development/flatiron-school/module-2/rails-edit-update-action-readme-dumbo-web-080618/app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/sherzodkarimov/Development/flatiron-school/module-2/rails-edit-update-action-readme-dumbo-web-080618/app/views/posts/edit.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/posts/edit.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.6ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2018-09-01 14:30:52 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/sherzodkarimov/Development/flatiron-school/module-2/rails-edit-update-action-readme-dumbo-web-080618/app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/sherzodkarimov/Development/flatiron-school/module-2/rails-edit-update-action-readme-dumbo-web-080618/app/views/posts/edit.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/posts/edit.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.1ms)
+
+
+Started GET "/4" for 127.0.0.1 at 2018-09-01 14:31:00 -0400
+
+ActionController::RoutingError (No route matches [GET] "/4"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/sherzodkarimov/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/sherzodkarimov/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/sherzodkarimov/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.2ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (83.8ms)
+
+
+Started GET "/3" for 127.0.0.1 at 2018-09-01 14:31:02 -0400
+
+ActionController::RoutingError (No route matches [GET] "/3"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/sherzodkarimov/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/sherzodkarimov/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/sherzodkarimov/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.1ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2018-09-01 14:31:06 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2018-09-01 14:31:09 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered posts/edit.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/sherzodkarimov/Development/flatiron-school/module-2/rails-edit-update-action-readme-dumbo-web-080618/app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/sherzodkarimov/Development/flatiron-school/module-2/rails-edit-update-action-readme-dumbo-web-080618/app/views/posts/edit.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/posts/edit.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.7ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2018-09-01 14:32:00 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered posts/edit.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/Users/sherzodkarimov/Development/flatiron-school/module-2/rails-edit-update-action-readme-dumbo-web-080618/app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/sherzodkarimov/Development/flatiron-school/module-2/rails-edit-update-action-readme-dumbo-web-080618/app/views/posts/edit.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/posts/edit.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.5ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2018-09-01 14:32:02 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2018-09-01 14:32:05 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered posts/edit.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/sherzodkarimov/Development/flatiron-school/module-2/rails-edit-update-action-readme-dumbo-web-080618/app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/sherzodkarimov/Development/flatiron-school/module-2/rails-edit-update-action-readme-dumbo-web-080618/app/views/posts/edit.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/posts/edit.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.7ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2018-09-01 14:32:27 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered posts/edit.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/sherzodkarimov/Development/flatiron-school/module-2/rails-edit-update-action-readme-dumbo-web-080618/app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/sherzodkarimov/Development/flatiron-school/module-2/rails-edit-update-action-readme-dumbo-web-080618/app/views/posts/edit.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/posts/edit.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.7ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2018-09-01 14:32:29 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered posts/edit.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/sherzodkarimov/Development/flatiron-school/module-2/rails-edit-update-action-readme-dumbo-web-080618/app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/sherzodkarimov/Development/flatiron-school/module-2/rails-edit-update-action-readme-dumbo-web-080618/app/views/posts/edit.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/posts/edit.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.7ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2018-09-01 14:32:37 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered posts/edit.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts" for 127.0.0.1 at 2018-09-01 14:32:39 -0400
+
+ActionController::RoutingError (No route matches [PATCH] "/posts"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/sherzodkarimov/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/sherzodkarimov/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/sherzodkarimov/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (71.3ms)
+
+
+Started PATCH "/posts" for 127.0.0.1 at 2018-09-01 14:32:56 -0400
+
+ActionController::RoutingError (No route matches [PATCH] "/posts"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/sherzodkarimov/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/sherzodkarimov/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/sherzodkarimov/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (71.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-09-01 14:32:59 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2018-09-01 14:33:02 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007f90cf584cf8>:0x007f90cb013638>):
+     7:     <%= f.text_area :description %><br>
+     8:     <% end %>
+     9: 
+    10:     <%= f.submit "Submit Post" %>
+    11:     <% end %>
+  app/views/posts/edit.html.erb:10:in `block in _app_views_posts_edit_html_erb___1866783906023059847_70129928930140'
+  app/views/posts/edit.html.erb:1:in `_app_views_posts_edit_html_erb___1866783906023059847_70129928930140'
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.6ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2018-09-01 14:33:28 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (15.8ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007f90c855db00>:0x007f90c8514e78>):
+     7:     <%= f.text_area :description %><br>
+     8:     <% end %>
+     9: 
+    10:     <%= f.submit "Submit Post" %>
+    11:     <% end %>
+  app/views/posts/edit.html.erb:10:in `block in _app_views_posts_edit_html_erb___1866783906023059847_70129928930140'
+  app/views/posts/edit.html.erb:1:in `_app_views_posts_edit_html_erb___1866783906023059847_70129928930140'
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.8ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.3ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2018-09-01 14:33:37 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (26.2ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007f91bc549930>:0x007f91bd458cc8>):
+     7:     <%= f.text_area :description %><br>
+     8:     <% end %>
+     9: 
+    10:     <%= f.submit "Submit Post" %>
+    11:     <% end %>
+  app/views/posts/edit.html.erb:10:in `block in _app_views_posts_edit_html_erb__3066983956009195066_70131944838840'
+  app/views/posts/edit.html.erb:1:in `_app_views_posts_edit_html_erb__3066983956009195066_70131944838840'
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.4ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2018-09-01 14:33:41 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007f91bc549930>:0x007f91bb458428>):
+     7:     <%= f.text_area :description %><br>
+     8:     <% end %>
+     9: 
+    10:     <%= f.submit "Submit Post" %>
+    11:     <% end %>
+  app/views/posts/edit.html.erb:10:in `block in _app_views_posts_edit_html_erb__3066983956009195066_70131944838840'
+  app/views/posts/edit.html.erb:1:in `_app_views_posts_edit_html_erb__3066983956009195066_70131944838840'
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.7ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2018-09-01 14:34:42 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 169ms (Views: 168.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2018-09-01 14:34:43 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/4" for 127.0.0.1 at 2018-09-01 14:34:45 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/q2+OAvO1/IZHiiwleODg/zvFdjECnqZoiG0SzKch17xr2invLr65/8ngWPp15R144KM6+qLSPj/zbBVawQ2vQ==", "post"=>{"title"=>"123a", "description"=>"123a"}, "commit"=>"Submit Post", "id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", nil], ["description", nil], ["updated_at", "2018-09-01 18:34:45.155965"], ["id", 4]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/posts/4
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2018-09-01 14:34:45 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2018-09-01 14:34:49 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-09-01 14:34:51 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2018-09-01 14:34:55 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/2/edit" for 127.0.0.1 at 2018-09-01 14:35:02 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/2" for 127.0.0.1 at 2018-09-01 14:35:06 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dzYQdEbujjcJqo3NzGQR3YsflyYhOjKLQj3oNdzUWC94NMbr8ZqjIu+TJB6wUAYrlHIOFQ+7AOof0ewrhUzpzA==", "post"=>{"title"=>"Rails Introduction bbb", "description"=>"test"}, "commit"=>"Submit Post", "id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", nil], ["description", nil], ["updated_at", "2018-09-01 18:35:06.897183"], ["id", 2]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/posts/2
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2018-09-01 14:35:06 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-09-01 14:35:11 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-09-01 14:36:17 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2018-09-01 14:36:21 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered posts/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/3" for 127.0.0.1 at 2018-09-01 14:36:24 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OfqfeulsY2VAKmeOJcSspaFHmnL8LQAJ/y7L6XPzM1s2+EnlXhhOcKYTzl1Z8LtTvioDQdKsMmiiws/3KmuCuA==", "post"=>{"title"=>"123", "description"=>"123"}, "commit"=>"Submit Post", "id"=>"3"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+RuntimeError ({"utf8"=>"✓", "_method"=>"patch", "authenticity_token"=>"OfqfeulsY2VAKmeOJcSspaFHmnL8LQAJ/y7L6XPzM1s2+EnlXhhOcKYTzl1Z8LtTvioDQdKsMmiiws/3KmuCuA==", "post"=>{"title"=>"123", "description"=>"123"}, "commit"=>"Submit Post", "controller"=>"posts", "action"=>"update", "id"=>"3"}):
+  app/controllers/posts_controller.rb:27:in `update'
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.2ms)
+
+
+Started PATCH "/posts/3" for 127.0.0.1 at 2018-09-01 14:37:08 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OfqfeulsY2VAKmeOJcSspaFHmnL8LQAJ/y7L6XPzM1s2+EnlXhhOcKYTzl1Z8LtTvioDQdKsMmiiws/3KmuCuA==", "post"=>{"title"=>"123", "description"=>"123"}, "commit"=>"Submit Post", "id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", nil], ["description", nil], ["updated_at", "2018-09-01 18:37:08.383613"], ["id", 3]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/posts/3
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2018-09-01 14:37:08 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2018-09-01 14:37:15 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2018-09-01 14:37:17 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/1/exit" for 127.0.0.1 at 2018-09-01 14:37:20 -0400
+
+ActionController::RoutingError (No route matches [GET] "/posts/1/exit"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/sherzodkarimov/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/sherzodkarimov/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/sherzodkarimov/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/sherzodkarimov/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (73.3ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2018-09-01 14:37:23 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2018-09-01 14:37:25 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RfX4kA9Nty8BZyMizAyvjpSsQG9aOUxgKtZPwTk+ZvdK9y4PuDmaOudeivGwOLh4i8HZXHS4fgF3OkvfYKbXFA==", "post"=>{"title"=>"Rails Introduction Quiz", "description"=>"asdfasdf"}, "commit"=>"Submit Post", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", nil], ["description", nil], ["updated_at", "2018-09-01 18:37:25.030948"], ["id", 1]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/posts/1
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2018-09-01 14:37:25 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-09-01 14:37:27 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-09-01 14:37:30 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-09-01 14:42:45 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 175ms (Views: 167.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-09-01 14:42:48 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-09-01 14:42:55 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jCDrBJ56viuhxH0H/sR+IAKWox4JMiYmlENnETM+3D+DIj2bKQ6TPkf91NSC8GnWHfs6LSezFEfJr2MPaqZt3A==", "title"=>"testing", "description"=>"my things\r\n", "commit"=>"Submit Post"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "testing"], ["description", "my things\r\n"], ["created_at", "2018-09-01 18:42:55.602538"], ["updated_at", "2018-09-01 18:42:55.602538"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/posts/7
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2018-09-01 14:42:55 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/7/edit" for 127.0.0.1 at 2018-09-01 14:43:00 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered posts/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.1ms)
